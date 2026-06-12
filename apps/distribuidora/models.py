@@ -6,6 +6,8 @@ class Bebida(models.Model):
     precio = models.DecimalField(max_digits=12, decimal_places=2, default=0.0)
     tipo = models.CharField(max_length=50)
     description = models.TextField()
+    imagen = models.ImageField(upload_to='imagenes_vinos') 
+
 
     def __str__(self):
         return self.nombre
